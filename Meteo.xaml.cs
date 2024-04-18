@@ -8,7 +8,7 @@ public partial class Meteo : ContentPage
 {
     private readonly HttpClient _httpClient = new HttpClient();
 
-    private string urlApiCitta = "https://api.jsonbin.io/v3/b/662034fead19ca34f85bbe8b";
+    private string urlApiMeteo = "https://api.jsonbin.io/v3/b/662034fead19ca34f85bbe8b";
 
     public ObservableCollection<RootMeteo> meteos { get; set; } = new();
 
@@ -25,7 +25,7 @@ public partial class Meteo : ContentPage
 
         base.OnAppearing();
 
-        var response = await _httpClient.GetFromJsonAsync<RootMeteo>(urlApiCitta);
+        var response = await _httpClient.GetFromJsonAsync<RootMeteo>(urlApiMeteo);
         meteos.Clear();
         meteos.Add(response);
     }
