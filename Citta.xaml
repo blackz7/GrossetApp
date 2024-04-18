@@ -5,9 +5,9 @@
              x:Name="CittaPage"
              BindingContext="{x:Reference CittaPage}">
     <Shell.TitleView>
-    <Grid>
+        <Grid>
             <Label Text="Città" HorizontalOptions="Center" VerticalOptions="Center" FontSize="22"/>
-    </Grid>
+        </Grid>
     </Shell.TitleView>
 
 
