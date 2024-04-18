@@ -2,19 +2,17 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrossetApp.Citta"
-             BindingContext="{x:Reference Citta}"
+             x:Name="CittaPage"
+             BindingContext="{x:Reference CittaPage}"
              Title="Citta">
 
 
-    <CollectionView ItemsSource="{Binding cittas}"
-                              
-                              x:Name="response">
+    <CollectionView ItemsSource="{Binding cittas}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <VerticalStackLayout>
-                    <Label Text="{Binding name}"/>
-
-                </VerticalStackLayout>
+                <StackLayout>
+                    <Label Text="{Binding metadata.name}" />
+                </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

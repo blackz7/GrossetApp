@@ -7,24 +7,27 @@ namespace GrossetApp;
 public partial class Citta : ContentPage
 {
 
- //   private readonly HttpClient _httpClient;
+    private readonly HttpClient _httpClient = new HttpClient();
 
-	//private string urlApiCitta = "https://api.jsonbin.io/v3/b/6620334ce41b4d34e4e60a2c";
+    private string urlApiCitta = "https://api.jsonbin.io/v3/b/6620334ce41b4d34e4e60a2c";
 
-	//public ObservableCollection<RootCitta> cittas { get; set; } = new();
+    public ObservableCollection<RootCitta> cittas { get; set; } = new();
 
- //   public Citta()
-	//{
-	//	InitializeComponent();
- //       _httpClient = new HttpClient();
- //       OnAppearing();
- //   }
+    public Citta()
+    {
+        InitializeComponent();
+        
+        OnAppearing();
+    }
 
 
-    //protected override async void OnAppearing()
-    //{
-    //    base.OnAppearing();
+    protected override async void OnAppearing()
+    {
 
-    //    var response = _httpClient.GetFromJsonAsync<RootCitta>(urlApiCitta);
-    //}
+        base.OnAppearing();
+
+        var response = await _httpClient.GetFromJsonAsync<RootCitta>(urlApiCitta);
+        cittas.Clear();
+        cittas.Add(response);   
+    }
 }
