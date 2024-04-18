@@ -13,7 +13,7 @@
 
             <Grid BackgroundColor="Red">
 
-                <Image Source="https://www.museonaturalemaremma.it/wp-content/uploads/2019/12/comune-grosseto-1.jpg" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Image Source="https://www.museonaturalemaremma.it/wp-content/uploads/2019/12/comune-grosseto-1.jpg" VerticalOptions="Center" HorizontalOptions="Start" Margin="10" WidthRequest="300" HeightRequest="250"/>
             </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
@@ -23,6 +23,22 @@
    
         <ShellContent Route="Citta" Title="Città" ContentTemplate="{DataTemplate local:Citta}" />
         <ShellContent Route="Meteo" Title="Meteo" ContentTemplate="{DataTemplate local:Meteo}" />
-    
+
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="Green" Padding="10">
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Made by Giuseppe Battista with " />
+                            <Span Text="❤" TextColor="Red" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
 
 </Shell>
