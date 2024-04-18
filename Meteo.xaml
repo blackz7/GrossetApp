@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrossetApp.Meteo"
               x:Name="MeteoPage"
-                BindingContext="{x:Reference MeteoPage}"
-                Title="Meteo">
+                BindingContext="{x:Reference MeteoPage}">
+    <Shell.TitleView>
+        <Label Text="Meteo" HorizontalOptions="Center" VerticalOptions="Center" FontSize="22" />
+    </Shell.TitleView>
 
     <CollectionView ItemsSource="{Binding meteos}">
         <CollectionView.ItemTemplate>

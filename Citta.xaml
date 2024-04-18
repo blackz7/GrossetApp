@@ -3,15 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrossetApp.Citta"
              x:Name="CittaPage"
-             BindingContext="{x:Reference CittaPage}"
-             Title="Citta">
+             BindingContext="{x:Reference CittaPage}">
+    <Shell.TitleView>
+    <Grid>
+            <Label Text="Città" HorizontalOptions="Center" VerticalOptions="Center" FontSize="22"/>
+    </Grid>
+    </Shell.TitleView>
 
 
     <CollectionView ItemsSource="{Binding cittas}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
-                    <Label Text="{Binding metadata.name}" />
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Image Source="{Binding record.Stemma}" Grid.Row="0" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" />
+
+                        <Label Grid.Row="1">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Abitanti: " FontSize="16" />
+                                    <Span Text="{Binding record.Abitanti}" FontSize="20" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label Grid.Row="2">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Sindaco: " FontSize="16" />
+                                    <Span Text="{Binding record.Sindaco}" FontSize="20" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                    
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
