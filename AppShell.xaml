@@ -23,6 +23,22 @@
    
         <ShellContent Route="Citta" Title="Città" ContentTemplate="{DataTemplate local:Citta}" />
         <ShellContent Route="Meteo" Title="Meteo" ContentTemplate="{DataTemplate local:Meteo}" />
-    
+
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="LightGray" Padding="10">
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Made by Giuseppe Battista with " />
+                            <Span Text="❤" TextColor="Red" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
 
 </Shell>
