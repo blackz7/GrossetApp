@@ -13,7 +13,7 @@
 
             <Grid BackgroundColor="Red">
 
-                <Image Source="https://www.museonaturalemaremma.it/wp-content/uploads/2019/12/comune-grosseto-1.jpg" VerticalOptions="Center" HorizontalOptions="Start" Margin="10"/>
+                <Image Source="https://www.museonaturalemaremma.it/wp-content/uploads/2019/12/comune-grosseto-1.jpg" VerticalOptions="Center" HorizontalOptions="Start" Margin="10" WidthRequest="300" HeightRequest="250"/>
             </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
@@ -27,7 +27,7 @@
 
     <Shell.FlyoutFooterTemplate>
         <DataTemplate>
-            <StackLayout BackgroundColor="LightGray" Padding="10">
+            <StackLayout BackgroundColor="Green" Padding="10">
                 <Label HorizontalOptions="Center">
                     <Label.FormattedText>
                         <FormattedString>
